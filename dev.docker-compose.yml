@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+
+  api:
+    build:
+      context: ./api
+      args:
+        ZIGVER: 0.11.0
+    container_name: api
+    command: sh -c "tail -f /dev/null"
+    restart: always
